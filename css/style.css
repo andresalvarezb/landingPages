@@ -1,17 +1,15 @@
 @import url("normalize.css");
 
 :root {
-    --mobile:;
-    --desktop:;
-
-    --color-primary:;
-    --color-secondary:;
-    --color-ternary:;
-    --color-text:;
-
-    --radius:;
-
-    --font-family:;
+    /* --mobile:; */
+    --desktop: 1500px;
+    
+    --color-primary:#457D61;
+    --color-secondary: #fff;
+    --color-text: #252525;
+    
+    --radius: 2rem;
+    --font-family: 'Times New Roman', Times, serif;
 }
 
 * {
@@ -30,4 +28,23 @@ ul {
 
 a {
     text-decoration: none;
+}
+
+.container {
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    gap: 1rem;
+    grid-template-areas: 
+    "section1 section2 section3"
+    "section1 section2 section3";
+}
+
+.section1 {
+    grid-area: section1;
+}
+.section2 {
+    grid-area: section2;
+}
+.section3 {
+    grid-area: section3;
 }
