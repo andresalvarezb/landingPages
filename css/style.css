@@ -2,12 +2,12 @@
 
 :root {
     /* --mobile:; */
-    --desktop: 1500px;
-    
+    --desktop: 1200px;
+
     --color-primary:#457D61;
     --color-secondary: #fff;
     --color-text: #252525;
-    
+
     --radius: 6rem;
     --font-family: 'Times New Roman', Times, serif;
     --font-family-2: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -53,11 +53,14 @@ img {
     width: 176px;
     height: 300px;
 }
-    
+
 .container {
     max-width: var(--desktop);
+    margin: 0 auto;
+    padding: 0.5rem;
     display: grid;
-    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    /* grid-template: repeat(2, 1fr) / repeat(3, 1fr); */
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     grid-template-areas: 
     "section1 section2 section3"
@@ -78,15 +81,17 @@ img {
     font-family: var(--font-family-2);
 }
 
-.section1__imgs {
+.section1__imgs,
+.section3__imgs {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     gap: 1rem;
-    height: 400px;
+    height: 350px;
 }
 
-.section1__imgs .section1__img:first-child {
+.section1__imgs .section__img:last-child,
+.section3__imgs .section__img:last-child {
     align-self: flex-start;
 }
 
