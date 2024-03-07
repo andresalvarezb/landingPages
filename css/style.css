@@ -10,7 +10,7 @@
     --color-extra: #FE6E06;
     --color-text: #333333;
 
-    --radius: 1rem;
+    --radius: 4rem;
 
     --font-family-1:'Times New Roman', Times, serif;
     --font-famil-2: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -32,4 +32,96 @@ ul {
 
 a {
     text-decoration: none;
+}
+
+body {
+    background-color: #fff;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.container {
+    width: var(--desktop);
+    margin: 0 auto;
+    height: 100vh;
+    position: relative;
+}
+
+.container__bg-1 {
+    /* position: absolute;
+    top: 80%; */
+    height: 80vh;
+}
+
+.container__bg-2 {
+    /* position:  */
+    height: 20vh;
+}
+
+.container__content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+}
+
+.content__title {
+    color: var(--color-secondary);
+    font-size: 4rem;
+}
+
+.content__text{
+    font-family: var(--font-famil-2);
+    line-height: 1.5;
+    margin-block: 2rem;
+}
+
+.content__btn {
+    color: var(--color-secondary);
+    background-color: var(--color-extra);
+    border-radius: var(--radius);
+    padding: 1rem 1.5rem;
+    text-transform: capitalize;
+}
+
+.content__cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.card {
+    --radius:1rem;
+    background-color: #FAEFE3;
+    border-radius: var(--radius);
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.card__icon span {
+    color: var(--color-extra);
+}
+
+.card__title,
+.card__text {
+    font-family: var(--font-famil-2);
+}
+
+.card__title {
+    text-transform: capitalize;
+    margin: 1rem 0;
+}
+
+.img {
+   width: 100%;
+   height: 100%; 
 }
